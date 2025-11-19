@@ -1,1 +1,17 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --accent-color: #000;
+  --main-font: Inter-Variable;
+  --accent-font: PressStart2P-Regular;
+  --card__title-font-weight: 700;
+  --card__text-font-weight: 400;
+  --header__height: clamp(330px, 38vh, 50vh);
+  --header__font-size: clamp(3.1rem, 2.7rem + 1.6vw, 4.1rem);
+  --header__text-font-size: clamp(0.9rem, 0.7rem + 0.9vw, 1.4rem);
+  --contour__color: #000;
+  --core__color: none;
+  --main__body-color: none;
+  --sparks__color: none;
+  --bg__image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+               repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+               linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+}
