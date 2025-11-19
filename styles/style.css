@@ -53,13 +53,13 @@
 
 .card__pic-label {
   position: relative;
-  top: 25px;
-  left: 607px;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow: 0 0 2px #fff;
+  left: 610px;
+  top: -682px;
 }
 
 .card__text {
@@ -76,11 +76,9 @@
 
 .sprint_0 .card__pic {
   position: relative;
-  width: 100%;
+  width: 696px;
   height: 696px;
-  background-image: url(../images/bg_image_0.jpg);
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .sprint_0 .card__text-container {
@@ -468,4 +466,14 @@ dialog::backdrop {
   background-color: inherit;
   border: 2px solid var(--accent-color);
   padding: 11px 132px;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .card__pic-label {
+    -webkit-text-stroke: 1px rgba(255 255 255 / 0.5);
+  }
+  
+  .card__pic-label {
+    text-stroke: 1px rgba(255 255 255 / 0.5);
+  }
 }
