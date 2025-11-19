@@ -4,6 +4,7 @@
   font-family: var(--main-font), sans-serif;
   justify-items: center;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .header {
@@ -178,7 +179,7 @@
 }
 
 .now .card__pic {
-  filter: contrast(1.2)
+  filter: contrast(1.2), blur(0.5px);
 }
 
 .now .card__text-container {
@@ -293,13 +294,13 @@ svg {
   transition: fill 0.1s linear;
 }
 
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
 .card__icon-button:focus {
   border: none;
   outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
 }
 
 .button {
@@ -408,7 +409,7 @@ dialog::backdrop {
   grid-template-columns: min-content 1fr;
   column-gap: 20px;
   row-gap: 30px;
-  inline-size: clamp(341px, 24.514vw, 353px);
+  inline-size: clamp(341px, 24.5vw, 353px);
   border: 2px solid var(--accent-color);
   padding: 30px;
 }
