@@ -7,14 +7,15 @@
   overflow-x: hidden;
   background-image: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
                     repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 4px),
-                    linear-gradient(to bottom, #e7e7e7, #1a1a1a);;
+                    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   background-size: 100% 960px;
   background-repeat: no-repeat;
 }
 
 .header {
-  width: 696px;
-  height: 364px;
+  max-width: 696px;
+  width: 100%;
+  height: auto;
   font-family: var(--accent-font), sans-serif;
   font-weight: 400;
   line-height: 100%;
@@ -22,7 +23,7 @@
   text-transform: uppercase;
   justify-items: center;
   background-color: #fff;
-  padding: 128px 120.5px;
+  padding: 128px 20px;
   border: 2px solid #000;
 }
 
@@ -36,7 +37,8 @@
 }
 
 .card {
-  width: clamp(375px, 100vw, 700px);
+  max-width: 700px;
+  width: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -59,8 +61,9 @@
 
 .card__pic {
   position: relative;
-  width: 696px;
-  height: 696px;
+  max-width: 696px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -76,7 +79,8 @@
 }
 
 .card__text {
-  width: 100%;
+  max-width: 646px;
+  width: auto;
   font-size: 18px;
   line-height: 21px;
   margin-top: 25px;
@@ -88,11 +92,7 @@
 }
 
 .sprint_0 .card__text-container {
-  height:  175px;
-}
-
-.sprint_0 .card__text {
-  width: 646px;
+  height: 175px;
 }
 
 .sprint_1_1 .card__pic {
@@ -103,20 +103,12 @@
   height: 200px;
 }
 
-.sprint_1_1 .card__text {
-  width: 646px;
-}
-
 .sprint_1_2 .card__pic {
   filter: contrast(1.5);
 }
 
 .sprint_1_2 .card__text-container {
   height:  175px;
-}
-
-.sprint_1_2 .card__text {
-  width: 646px;
 }
 
 .sprint_1_2 .card__pic-label {
@@ -135,10 +127,6 @@
   height: 200px;
 }
 
-.sprint_2_1 .card__text {
-  width: 646px;
-}
-
 .sprint_2_2 .card__pic {
   filter: contrast(1.25)
 }
@@ -149,10 +137,6 @@
 
 .sprint_2_2 .card__text-container {
   height: 230px;
-}
-
-.sprint_2_2 .card__text {
-  width: 646px;
 }
 
 .sprint_3_1 .card__pic {
@@ -167,10 +151,6 @@
   height: 170px;
 }
 
-.sprint_3_1 .card__text {
-  width: 646px;
-}
-
 .sprint_3_2 .card__pic {
   filter: blur(2px);
 }
@@ -179,20 +159,12 @@
   height: 200px;
 }
 
-.sprint_3_2 .card__text {
-  width: 646px;
-}
-
 .now .card__pic {
-  filter: contrast(1.2), blur(0.5px);
+  filter: contrast(1.2) blur(0.5px);
 }
 
 .now .card__text-container {
   height: 260px;
-}
-
-.now .card__text {
-  width: 646px;
 }
 
 svg {
