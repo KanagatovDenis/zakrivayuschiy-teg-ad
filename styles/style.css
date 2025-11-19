@@ -51,6 +51,13 @@
   font-size: 18px;
 }
 
+.card__pic {
+  position: relative;
+  width: 696px;
+  height: 696px;
+  object-fit: cover;
+}
+
 .card__pic-label {
   position: relative;
   font-family: var(--accent-font), sans-serif;
@@ -74,13 +81,6 @@
   margin-top: 27px;
 }
 
-.sprint_0 .card__pic {
-  position: relative;
-  width: 696px;
-  height: 696px;
-  object-fit: cover;
-}
-
 .sprint_0 .card__text-container {
   height:  175px;
 }
@@ -90,15 +90,11 @@
 }
 
 .sprint_1_1 .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_1_1.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: sepia(0.1);
 }
 
 .sprint_1_1 .card__text-container {
-  height:  200px;
+  height: 200px;
 }
 
 .sprint_1_1 .card__text {
@@ -106,11 +102,7 @@
 }
 
 .sprint_1_2 .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_1_2.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: contrast(1.5);
 }
 
 .sprint_1_2 .card__text-container {
@@ -126,11 +118,7 @@
 }
 
 .sprint_2_1 .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_2_1.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: brightness(1.1);
 }
 
 .sprint_2_1 .card__pic-label {
@@ -146,11 +134,7 @@
 }
 
 .sprint_2_2 .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_2_2.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: contrast(1.25)
 }
 
 .sprint_2_2 .card__pic-label {
@@ -166,11 +150,7 @@
 }
 
 .sprint_3_1 .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_3_1.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: grayscale(1.25);
 }
 
 .sprint_3_1 .card__pic-label {
@@ -186,11 +166,7 @@
 }
 
 .sprint_3_2 .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_3_2.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: blur(2px);
 }
 
 .sprint_3_2 .card__text-container {
@@ -202,11 +178,7 @@
 }
 
 .now .card__pic {
-  width: 100%;
-  height: 696px;
-  background-image: url(../images/bg_image_now.jpg);
-  background-position: center;
-  background-size: cover;
+  filter: contrast(1.2)
 }
 
 .now .card__text-container {
@@ -471,9 +443,6 @@ dialog::backdrop {
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
   .card__pic-label {
     -webkit-text-stroke: 1px rgba(255 255 255 / 0.5);
-  }
-  
-  .card__pic-label {
     text-stroke: 1px rgba(255 255 255 / 0.5);
   }
 }
