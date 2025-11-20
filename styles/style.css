@@ -425,3 +425,9 @@ dialog::backdrop {
     text-stroke: 1px rgba(255 255 255 / 0.5);
   }
 }
+
+@media (max-inline-size: 375px) {
+  .page {
+    overflow-x: hidden;
+  }
+}
