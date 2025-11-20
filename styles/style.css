@@ -426,8 +426,68 @@ dialog::backdrop {
   }
 }
 
-@media (max-inline-size: 375px) {
+@media (max-width: 375px) {
   .page {
     overflow-x: hidden;
+  }
+  
+  .header {
+    padding: 100px 10px; /* Уменьшаем отступы */
+    max-width: 100%;
+  }
+  
+  .header__title {
+    font-size: 40px; /* Уменьшаем размер шрифта */
+  }
+  
+  .header__subtitle {
+    font-size: 18px; /* Уменьшаем размер шрифта */
+  }
+  
+  .card {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  
+  .card:first-child {
+    margin-top: 50px;
+  }
+  
+  .card__pic {
+    max-width: 100%;
+  }
+  
+  .card__pic-label {
+    position: absolute;
+    left: auto;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+  }
+  
+  .card__text {
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  
+  .buttons {
+    margin-right: 15px;
+  }
+  
+  .save-button {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+  }
+  
+  .save-dialog[open] {
+    inline-size: 90vw;
+    padding: 20px;
+  }
+  
+  .close-button {
+    padding: 11px 0;
   }
 }
