@@ -433,12 +433,7 @@ dialog::backdrop {
 
 @media (max-width: 375px) {
   .card__pic-label {
-    position: absolute;
-    left: auto;
-    right: 12px;
-    top: 12px;
-    font-size: 12px;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
+    display: none;
   }
 
   .card__pic {
