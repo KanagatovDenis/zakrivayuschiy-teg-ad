@@ -1,11 +1,12 @@
 .page {
-  min-inline-size: 320px;
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
   min-block-size: 100dvb;
   max-width: 100vw;
   font-family: var(--main-font), sans-serif;
   justify-items: center;
   box-sizing: border-box;
-  overflow-x: hidden;
   background-image: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
                     repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 4px),
                     linear-gradient(to bottom, #e7e7e7, #1a1a1a);
@@ -51,6 +52,7 @@ main {
   align-items: center;
   border: 2px solid var(--accent-color);
   margin-top: 52px;
+  position: relative;
 }
 
 .card:first-child {
@@ -74,14 +76,16 @@ main {
 }
 
 .card__pic-label {
-  position: relative;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  left: auto;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
-  opacity: 0.5;
-  mix-blend-mode: hard-light;
+  opacity: 0.7;
   text-shadow: 0 0 2px #fff;
-  left: 610px;
-  top: -682px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .card__text {
@@ -432,24 +436,8 @@ dialog::backdrop {
 }
 
 @media (max-width: 375px) {
-  .card__pic-label {
-    display: none;
-  }
-
-  .card__pic {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .card__title {
-    padding: 5px 15px 5px 15px;
-  }
-
   main {
-    width: calc(100vw - 20px);
-    margin: 0 auto;
+    width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
   }
@@ -460,20 +448,22 @@ dialog::backdrop {
     box-sizing: border-box;
   }
 
-  .buttons {
-    margin-right: 15px;
-    margin-bottom: 15px;
+  .header__title {
+    font-size: clamp(32px, 8vw, 65px);
   }
 
-  .card {
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  .header__title,
   .header__subtitle {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    font-size: clamp(16px, 5vw, 23px);
+  }
+
+  .card__pic-label {
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .card__pic {
+    max-width: 100%;
+    width: 100%;
   }
 }
