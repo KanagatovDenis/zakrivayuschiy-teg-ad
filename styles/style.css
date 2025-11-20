@@ -37,6 +37,11 @@
   margin-top: 20px;
 }
 
+main {
+  width: clamp(375px, 90vw, 696px);
+  margin: 0px auto;
+}
+
 .card {
   max-width: 700px;
   width: 100%;
