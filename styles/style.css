@@ -1,6 +1,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  max-width: 100vw;
   font-family: var(--main-font), sans-serif;
   justify-items: center;
   box-sizing: border-box;
